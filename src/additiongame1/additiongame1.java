@@ -57,8 +57,9 @@ public class additiongame1 {
 			if (userAnswer == rightAnswer){
 			System.out.println("your answer is correct");
 		}
+		
 		}
-		     
+		    
 		// Round 2
 		hardness *= 10;
 		//	Generate 2 random numbers
@@ -75,25 +76,40 @@ public class additiongame1 {
 		int useranswer = input.nextInt();
 		//  Check if the answer was correct
 		//		IF correct
-		if(correctAnswer == studentAnswer);{
+		if (correctAnswer == studentAnswer);{
 		//			Tell them it was correct
 			System.out.println("Answer was correct");
-
+			
 		//			Give them points
 		score += 10;
 		System.out.println("Your Current Score = " + score);
 		//			Make the next question harder
-//		Make the next question harder
+	// Make the next question harder
 	hardness = 100;	
 		System.out.println("hardness is: " + hardness);
 		}
 		
-		
+	
 		//		IF not correct
+		
+		
 		//			Tell them it was wrong
+			System.out.println("Your Answer was incorrect");
 		// 			Tell them the correct answer
+			System.out.println("The correct answer was: " + (number3 + number4));
 		//			Do not give them points
 		//			Make the next question easier
+		
+			System.out.println("What is 2 + 3 ?");
+			int userAnswer = input.nextInt();
+			if (userAnswer == 5) {
+
+			System.out.println("You are correct, Be ready for the "
+			+ "next question");
+
+			}
+			
+		
 		
 		// Round 3
 		//	Generate 2 random numbers
