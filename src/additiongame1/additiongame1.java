@@ -26,8 +26,7 @@ public class additiongame1 {
 		int correctAnswer = number1 + number2;
 
 		//  Ask the user to add these two numbers together
-		System.out.println
-		("What is " + number1 + " + " + number2 + "?");
+		System.out.println ("What is " + number1 + " + " + number2 + "?");
 
 		//  Read in their response
 		Scanner input = new Scanner(System.in);
@@ -41,7 +40,7 @@ public class additiongame1 {
 			score = 10;
 			System.out.println("Score is: " + score);
 			//			Make the next question harder
-		hardness = 100;	
+		hardness = 10;	
 			System.out.println("hardness is: " + hardness);
 		}
 			//	IF not correct
@@ -61,14 +60,35 @@ public class additiongame1 {
 		}
 		     
 		// Round 2
+		hardness *= 10;
 		//	Generate 2 random numbers
+		int number3 = (int)(Math.random()*hardness);
+		int number4 = (int)(Math.random()*hardness);
+		
+         // to keep the correct answer
+		int rightanswer = number3 + number4;
+		
 		//  Ask the user to add these two numbers together
+		System.out.println("What is " + number3 + " + " + number4 + "?");
+		
 		//  Read in their response
+		int useranswer = input.nextInt();
 		//  Check if the answer was correct
 		//		IF correct
+		if(correctAnswer == studentAnswer);{
 		//			Tell them it was correct
+			System.out.println("Answer was correct");
+
 		//			Give them points
+		score += 10;
+		System.out.println("Your Current Score = " + score);
 		//			Make the next question harder
+//		Make the next question harder
+	hardness = 100;	
+		System.out.println("hardness is: " + hardness);
+		}
+		
+		
 		//		IF not correct
 		//			Tell them it was wrong
 		// 			Tell them the correct answer
