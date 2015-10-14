@@ -2,113 +2,55 @@ package additiongame1;
 import java.util.Scanner;
 
 public class additiongame1 {
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		System.out.println("Hello Class!");
-		
-		//This is my master branch.
+		// This is my master branch.
 		// Outline for addition problem.
-
+		
 		int score = 0;
-		int hardness = 10;
-
+		int hardnessOfQuestion = 10;
+		
 		// Round 1
-		// Generate 2 random numbers
-		int number1 = (int)(Math.random() * hardness);
+		//	Generate 2 random numbers
+		int number1 = (int)(Math.random() * hardnessOfQuestion);
 		System.out.println("Number1 is :" + number1 );
-
-		int number2 = (int)(Math.random() * hardness);
+		
+		int number2 = (int)(Math.random() * hardnessOfQuestion);
 		System.out.println("Number2 is :" + number2 );
-
+		
 		// to keep track of the correct answer.
 		int correctAnswer = number1 + number2;
-
+		
 		//  Ask the user to add these two numbers together
-		System.out.println ("What is " + number1 + " + " + number2 + "?");
-
+		System.out.println
+		("What is " + number1 + " + " + number2 + "?");
+		
 		//  Read in their response
 		Scanner input = new Scanner(System.in);
 		int studentAnswer = input.nextInt();
 		//  Check if the answer was correct
-		//	IF correct
+		//		IF correct
 		if (studentAnswer == correctAnswer){
 			//			Tell them it was correct
 			System.out.println("Answer was correct");
 			//			Give them points
-			score = 10;
+			score += hardnessOfQuestion;
 			System.out.println("Score is: " + score);
 			//			Make the next question harder
-		hardness = 10;	
-			System.out.println("hardness is: " + hardness);
+			hardnessOfQuestion *= 10;	
+			System.out.println("hardness is: " + hardnessOfQuestion);
 		}
-			//	IF not correct
+		//		IF not correct
 		else{
 			//			Tell them it was wrong
-			System.out.println("Your Answer was not correct");
+			System.out.println("Answer was not correct");
 			// 			Tell them the correct answer
-			System.out.println("The correct answer was: " + (number1 + number2));
+			System.out.println("The correct answer was: " + correctAnswer);
 			//			Do not give them points
 			//			Make the next question easier
-			System.out.println("What number comes after " + number1 );
-			int userAnswer = input.nextInt();
-			int rightAnswer = number1 + 1;
-			if (userAnswer == rightAnswer){
-			System.out.println("your answer is correct");
 		}
-		
-		}
-		    
 		// Round 2
-		hardness *= 10;
-		//	Generate 2 random numbers
-		int number3 = (int)(Math.random()*hardness);
-		int number4 = (int)(Math.random()*hardness);
-		
-         // to keep the correct answer
-		int rightanswer = number3 + number4;
-		
-		//  Ask the user to add these two numbers together
-		System.out.println("What is " + number3 + " + " + number4 + "?");
-		
-		//  Read in their response
-		int useranswer = input.nextInt();
-		//  Check if the answer was correct
-		//		IF correct
-		if (correctAnswer == studentAnswer);{
-		//			Tell them it was correct
-			System.out.println("Answer was correct");
-			
-		//			Give them points
-		score += 10;
-		System.out.println("Your Current Score = " + score);
-		//			Make the next question harder
-	// Make the next question harder
-	hardness = 100;	
-		System.out.println("hardness is: " + hardness);
-		}
-		
-	
-		//		IF not correct
-		
-		
-		//			Tell them it was wrong
-			System.out.println("Your Answer was incorrect");
-		// 			Tell them the correct answer
-			System.out.println("The correct answer was: " + (number3 + number4));
-		//			Do not give them points
-		//			Make the next question easier
-		
-			System.out.println("What is 2 + 3 ?");
-			int userAnswer = input.nextInt();
-			if (userAnswer == 5) {
-
-			System.out.println("You are correct, Be ready for the "
-			+ "next question");
-
-			}
-			
 		
 		
 		// Round 3
